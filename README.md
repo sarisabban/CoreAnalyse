@@ -31,8 +31,11 @@ To use in python 3 follow these steps:
 4. All files must be in the same directory as this script.
 
 5. Run by navigating to working directory then typing this in the command line to loop through all .pdb files:
+
 `for file in *.pdb; do ./CoreAnalyse.py "$file"; done > result`
+
 6. To run a single file and see the verbatim mode (which includes the found residues, their location, and the pymol commands) add -v after the filename in the terminal command. Example:
+
 `./CoreAnalyse.py filename.pdb -v`
 
 
