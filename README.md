@@ -28,8 +28,12 @@ To use in python 3 follow these steps:
 1. Install biopython by running the following command in terminal (python3 -m pip install biopython) you need pip to be installed, if you do not have it you can install it in linux by running the following command in terminal (sudo apt-get install python3-pip).
 2. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
 3. Install numpy (python3 -m pip install numpy).
-4. Run by typeing in command line: ./RefineAssist3.py
-5. Enter file name when prompted. File must be in the same directory as this script.
+4. All files must be in the same directory as this script.
+
+5. Run by navigating to working directory then typing this in the command line to loop through all .pdb files:
+`for file in *.pdb; do ./CoreAnalyse.py "$file"; done > result`
+6. To run a single file and see the verbatim mode (which includes the found residues, their location, and the pymol commands) add -v after the filename in the terminal command. Example:
+`./CoreAnalyse.py filename.pdb -v`
 
 
 ## REFERENCES:
