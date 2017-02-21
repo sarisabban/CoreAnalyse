@@ -9,21 +9,14 @@ This script does the following:
 1. Prints out PYMOL commands to select spesific amino acids in a protein depending on their layer calculated by their SASA (solvent-accessible surface area). These commands allow the user to colour different parts of a protein and better visualise it in order to take better decisions on refining it.
 2. Prints out a sequence alignment which shows which amino acid belongs to which layers in the protein accodring to its SASA value, in which secondary structure does each amino acid belong to, the protein's amino acid sequence, and points out with a * which amino acids belong to the wrong layer and should be mutated.
 
-This script was written to run on GNU/Linux, it was not tested in Windows or MacOS.
+This script was written to run on GNU/Linux using python 3, it was not tested in Windows or MacOS.
 This script will mostly be useful to refine proteins after a Rosetta FFL (Fold From Loop) computation, but can still be used to refine any protein.
 Contact the author at sari.sabban@gmail.com for any questions regarding this script.
 
 
 
 ## HOW TO USE:
-To use in python 2 follow these steps:
-
-1. Install biopython by running the following command in terminal (pip install biopython) you need pip to be installed, if you do not have it you can install it in linux by running the following command in terminal (sudo apt-get install python-pip).
-2. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
-3. Run by typeing in command line: ./RefineAssist.py
-4. Enter file name when prompted. File must be in the same directory as this script.
-
-To use in python 3 follow these steps:
+To use follow these steps:
 
 1. Install biopython by running the following command in terminal (python3 -m pip install biopython) you need pip to be installed, if you do not have it you can install it in linux by running the following command in terminal (sudo apt-get install python3-pip).
 2. Install DSSP in linux by running the following command in terminal (sudo apt-get install dssp).
