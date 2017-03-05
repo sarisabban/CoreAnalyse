@@ -52,7 +52,7 @@ for x in dssp:					#Loop to isolate SASA for each amino acid
 	elif x[1]=='D':sasa=193*(x[3])
 
 #Calculate if polar amino acids (DEKHRQNSTY) are in core and print them
-	if (x[2]=='G' or x[2]=='H' or x[2]=='I' or x[2]=='B' or x[2]=='E') and (x[1]=='D' or x[1]=='E' or x[1]=='K' or x[1]=='H' or x[1]=='R' or x[1]=='Q' or x[1]=='N' or x[1]=='S' or x[1]=='T' or x[1]=='Y') and sasa <= 15:		#In helix or sheet
+	if (x[2]=='G' or x[2]=='H' or x[2]=='I' or x[2]=='B' or x[2]=='E') and (x[1]=='D' or x[1]=='E' or x[1]=='K' or x[1]=='H' or x[1]=='R' or x[1]=='Q' or x[1]=='N' or x[1]=='S' or x[1]=='T' or x[1]=='Y') and sasa <= 15: #Helix (GHI) and Sheet (BE)
 		for verb in sys.argv:
 			if verb=='-v':
 				print(x[0],x[1])
@@ -61,7 +61,7 @@ for x in dssp:					#Loop to isolate SASA for each amino acid
 
 		count=count+1
 		reslist.append(x[0])
-	if (x[2]=='-' or x[2]=='T' or x[2]=='S') and (x[1]=='D' or x[1]=='E' or x[1]=='K' or x[1]=='H' or x[1]=='R' or x[1]=='Q' or x[1]=='N' or x[1]=='S' or x[1]=='T' or x[1]=='Y') and sasa <= 25:					#In loop
+	if (x[2]=='-' or x[2]=='T' or x[2]=='S') and (x[1]=='D' or x[1]=='E' or x[1]=='K' or x[1]=='H' or x[1]=='R' or x[1]=='Q' or x[1]=='N' or x[1]=='S' or x[1]=='T' or x[1]=='Y') and sasa <= 25: #Loop (-TS)
 		for verb in sys.argv:
 			if verb=='-v':
 				print(x[0],x[1])
