@@ -1,4 +1,4 @@
-# RefineAssist
+# CoreAnalyse
 This script points out if a protein's core has polar amino acids.
 
 
